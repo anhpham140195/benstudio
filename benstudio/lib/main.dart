@@ -1,36 +1,75 @@
-import 'package:benstudio/config/route.dart';
-import 'package:benstudio/pages/mainPage.dart';
-import 'package:benstudio/pages/product_detail.dart';
-import 'package:benstudio/themes/theme.dart';
-import 'package:benstudio/widgets/customRoute.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:benstudio/provider/app_provider.dart';
+import 'package:benstudio/provider/drawer_provider.dart';
+import 'package:benstudio/provider/scroll_provider.dart';
+import 'package:benstudio/sections/main/main_section.dart';
+import 'package:provider/provider.dart';
+import 'package:url_strategy/url_strategy.dart';
+import 'package:benstudio/configs/core_theme.dart' as theme;
 
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  setPathUrlStrategy();
+  runApp(const MyApp());
+}
 
-void main() => runApp(MyApp());
+class MyApp extends StatefulWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-class MyApp extends StatelessWidget {
+  @override
+  MyAppState createState() => MyAppState();
+}
+
+class MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AppProvider()),
+        ChangeNotifierProvider(create: (_) => DrawerProvider()),
+        ChangeNotifierProvider(create: (_) => ScrollProvider()),
+      ],
+      child: Consumer<AppProvider>(
+        builder: (context, value, _) => MaterialChild(
+          provider: value,
+        ),
+      ),
+    );
+  }
+}
+
+class MaterialChild extends StatefulWidget {
+  final AppProvider provider;
+  const MaterialChild({Key? key, required this.provider}) : super(key: key);
+
+  @override
+  State<MaterialChild> createState() => _MaterialChildState();
+}
+
+class _MaterialChildState extends State<MaterialChild> {
+  void initAppTheme() {
+    final appProviders = AppProvider.state(context);
+    appProviders.init();
+  }
+
+  @override
+  void initState() {
+    initAppTheme();
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'E-Commerce ',
-      theme: AppTheme.lightTheme.copyWith(
-        textTheme: GoogleFonts.mulishTextTheme(
-          Theme.of(context).textTheme,
-        ),
-      ),
       debugShowCheckedModeBanner: false,
-      routes: Routes.getRoute(),
-      onGenerateRoute: (RouteSettings settings) {
-        if (settings.name!.contains('detail')) {
-          return CustomRoute<bool>(
-              builder: (BuildContext context) => ProductDetailPage());
-        } else {
-          return CustomRoute<bool>(
-              builder: (BuildContext context) => MainPage(title: '',));
-        }
+      title: 'Ben Studio',
+      theme: theme.themeLight,
+      darkTheme: theme.themeDark,
+      themeMode: widget.provider.themeMode,
+      initialRoute: "/",
+      routes: {
+        "/": (context) => const MainPage(),
       },
-      initialRoute: "MainPage",
     );
   }
 }
