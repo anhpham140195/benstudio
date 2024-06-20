@@ -19,6 +19,7 @@ class ToolTechWidget extends StatelessWidget {
         ),
         Text(
           " $techName ",
+           maxLines: 2,
           style: AppText.l1b,
         )
       ],

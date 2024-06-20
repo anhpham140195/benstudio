@@ -47,7 +47,7 @@ class PortfolioMobileTab extends StatelessWidget {
           height: AppDimensions.normalize(14),
           width: AppDimensions.normalize(50),
           child: OutlinedButton(
-            onPressed: () => openURL(StaticUtils.gitHub),
+            onPressed: () => openURL(StaticUtils.instagram),
             child: Text(
               'See More',
               style: AppText.l1b,

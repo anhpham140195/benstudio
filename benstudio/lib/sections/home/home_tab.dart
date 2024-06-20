@@ -113,7 +113,7 @@ class HomeTab extends StatelessWidget {
                   ),
                 ),
                 Space.y2!,
-                const SocialLinks(),
+                // const SocialLinks(),
               ],
             ),
           ),

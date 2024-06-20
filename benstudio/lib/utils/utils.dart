@@ -22,11 +22,11 @@ class StaticUtils {
 
   // services
   static const String uiux = 'assets/services/ui.png';
-  static const String blog = 'assets/services/blog.png';
-  static const String appDev = 'assets/services/app.png';
-  static const String rapid = 'assets/services/rapid.png';
-  static const String openSource = 'assets/services/open.png';
-  static const String openSourceBlack = 'assets/services/open_b.png';
+  static const String resin = 'assets/services/resin.png';
+  static const String threed = 'assets/services/3dprinting.png';
+  static const String actionfig = 'assets/services/actionfig.png';
+  // static const String openSource = 'assets/services/open.png';
+  // static const String openSourceBlack = 'assets/services/open_b.png';
 
   static const List<String> socialIconURL = [
     "https://img.icons8.com/metro/208/ffffff/facebook-new--v2.png",
@@ -49,7 +49,7 @@ class StaticUtils {
   static const String resume =
       'https://drive.google.com/file/d/1bDNNrkQtNVJbXcdwMSx0crQQvAF_nMwV/view?usp=sharing';
 
-  static const String gitHub = 'https://github.com/mhmzdev';
+  static const String instagram= 'https://www.instagram.com/benworkshopvn/';
 }
 
 class BodyUtils {

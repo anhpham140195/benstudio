@@ -41,7 +41,7 @@ class HomeMobile extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      "HEY THERE! ",
+                      "WELCOME!",
                       style: AppText.b2!.copyWith(
                         fontFamily: 'Montserrat',
                       ),
@@ -55,14 +55,14 @@ class HomeMobile extends StatelessWidget {
                 ),
                 Space.y!,
                 Text(
-                  "Muhammad",
+                  "Ben",
                   style: AppText.h3!.copyWith(
                     fontFamily: 'Montserrat',
                     fontWeight: FontWeight.w100,
                   ),
                 ),
                 Text(
-                  "Hamza",
+                  "Workshop",
                   style: AppText.h3b!.copyWith(
                     height: 1,
                   ),
@@ -77,17 +77,17 @@ class HomeMobile extends StatelessWidget {
                     AnimatedTextKit(
                       animatedTexts: [
                         TyperAnimatedText(
-                          ' Flutter Developer',
+                          'Making figures',
                           speed: const Duration(milliseconds: 50),
                           textStyle: AppText.b1,
                         ),
                         TyperAnimatedText(
-                          ' UI/UX Enthusiast',
+                          'Ation figure 1:6',
                           speed: const Duration(milliseconds: 50),
                           textStyle: AppText.b1,
                         ),
                         TyperAnimatedText(
-                          ' A friend :)',
+                          'Resin Figure',
                           speed: const Duration(milliseconds: 50),
                           textStyle: AppText.b1,
                         ),
@@ -98,7 +98,7 @@ class HomeMobile extends StatelessWidget {
                   ],
                 ),
                 Space.y!,
-                const SocialLinks(),
+                // const SocialLinks(),
               ],
             ),
           ),

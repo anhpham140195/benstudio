@@ -2,15 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:benstudio/configs/configs.dart';
 import 'package:benstudio/constants.dart';
 import 'package:benstudio/utils/about_utils.dart';
-
 import 'package:benstudio/utils/utils.dart';
-import 'package:benstudio/utils/work_utils.dart';
 import 'package:benstudio/widget/about_me_data.dart';
-import 'package:benstudio/widget/community_button.dart';
 import 'package:benstudio/widget/custom_text_heading.dart';
 import 'package:benstudio/widget/tech_widget.dart';
-
-import 'package:universal_html/html.dart' as html;
 
 class AboutDesktop extends StatelessWidget {
   const AboutDesktop({Key? key}) : super(key: key);
@@ -102,7 +97,7 @@ class AboutDesktop extends StatelessWidget {
                             children: [
                               AboutMeData(
                                 data: "Name",
-                                information: "Ben Studio",
+                                information: "Ben Workshop",
                               ),
                               AboutMeData(
                                 data: "Since",

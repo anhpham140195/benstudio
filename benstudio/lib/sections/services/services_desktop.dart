@@ -22,28 +22,28 @@ class ServiceDesktopState extends State<ServiceDesktop> {
           const CustomSectionHeading(
             text: '\nWhat we can do?',
           ),
-          // const CustomSectionSubHeading(
-          //   text: 'I may not be perfect but surely I\'m of some use :)\n\n',
-          // ),
+          const CustomSectionSubHeading(
+            text: 'We are here to provide you the best service possible.\n\n',
+          ),
           Space.y!,
-          // Wrap(
-          //   spacing: width * 0.05,
-          //   runSpacing: height * 0.05,
-          //   alignment: WrapAlignment.center,
-          //   crossAxisAlignment: WrapCrossAlignment.center,
-          //   children: ServicesUtils.servicesIcons
-          //       .asMap()
-          //       .entries
-          //       .map(
-          //         (e) => _ServiceCard(
-          //           serviceIcon: ServicesUtils.servicesIcons[e.key],
-          //           serviceTitle: ServicesUtils.servicesTitles[e.key],
-          //           serviceDescription:
-          //               ServicesUtils.servicesDescription[e.key],
-          //         ),
-          //       )
-          //       .toList(),
-          // )
+          Wrap(
+            spacing: width * 0.05,
+            runSpacing: height * 0.05,
+            alignment: WrapAlignment.center,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            children: ServicesUtils.servicesIcons
+                .asMap()
+                .entries
+                .map(
+                  (e) => _ServiceCard(
+                    serviceIcon: ServicesUtils.servicesIcons[e.key],
+                    serviceTitle: ServicesUtils.servicesTitles[e.key],
+                    serviceDescription:
+                        ServicesUtils.servicesDescription[e.key],
+                  ),
+                )
+                .toList(),
+          )
         ],
       ),
     );

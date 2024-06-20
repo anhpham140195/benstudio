@@ -7,7 +7,6 @@ import 'package:benstudio/constants.dart';
 import 'package:benstudio/provider/app_provider.dart';
 import 'package:benstudio/responsive/responsive.dart';
 import 'package:benstudio/utils/services_utils.dart';
-import 'package:benstudio/utils/utils.dart';
 import 'package:benstudio/widget/custom_text_heading.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
