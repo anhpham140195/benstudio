@@ -22,7 +22,7 @@ class Footer extends StatelessWidget {
             InkWell(
               onTap: () => openURL("https://www.instagram.com/benworkshopvn/"),
               child: const Text(
-                "Ben Studio",
+                "Ben Workshop",
                 style: TextStyle(color: Colors.blue),
               ),
             )

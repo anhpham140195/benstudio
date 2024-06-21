@@ -78,14 +78,18 @@ class AboutMobile extends StatelessWidget {
             ),
           ),
           Space.y!,
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: kTools
-                .map(
-                  (e) => ToolTechWidget(techName: e),
-                )
-                .toList(),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: kTools
+                  .map(
+                    (e) => ToolTechWidget(techName: e),
+                  )
+                  .toList(),
+            ),
           ),
+
           Space.y!,
           Divider(
             color: Colors.grey[800],
@@ -96,7 +100,7 @@ class AboutMobile extends StatelessWidget {
           ),
           const AboutMeData(
             data: "Name",
-             information: "Ben Workshop",
+            information: "Ben Workshop",
           ),
           const AboutMeData(
             data: "Email",
