@@ -95,7 +95,7 @@ class _ServiceCardBackWidget extends StatelessWidget {
                       ),
                     )),
             child: Text(
-              'HIRE ME!',
+              'Contact Us!',
               style: AppText.b2!.copyWith(
                 color: Colors.white,
               ),
